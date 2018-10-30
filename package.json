@@ -1,6 +1,10 @@
 {
+  "name": "fullstack-graphql-react",
   "dependencies": {
     "lerna": "^3.4.3"
   },
-  "name": "fullstack-graphql-react"
+  "private": true,
+  "scripts": {
+    "start": "yarn lerna bootstrap && yarn lerna run start --stream"
+  }
 }

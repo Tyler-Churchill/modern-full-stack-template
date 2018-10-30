@@ -10,6 +10,7 @@ import resolvers from './resolvers';
 const schema = makeExecutableSchema({
   typeDefs: [MainSchema],
   resolvers
+  // add directives here
 });
 
 export default schema;

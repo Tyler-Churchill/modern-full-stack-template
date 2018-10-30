@@ -1,9 +1,10 @@
-import * as React from 'react'
+import React from 'react'
 import { Link } from 'gatsby'
 
 import Page from '../components/Page'
 import Container from '../components/Container'
 import IndexLayout from '../layouts'
+import DisplayServerReady from '../components/data/IsReady'
 
 const IndexPage = () => (
   <IndexLayout>
@@ -13,6 +14,9 @@ const IndexPage = () => (
         <p>Welcome to your new Gatsby site.</p>
         <p>Now go build something great.</p>
         <Link to="/page-2/">Go to page 2</Link>
+        <br />
+        Here is a query on our GraphQL server: IsReady:
+        <DisplayServerReady />
       </Container>
     </Page>
   </IndexLayout>

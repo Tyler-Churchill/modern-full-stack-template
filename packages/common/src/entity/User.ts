@@ -2,11 +2,14 @@ import * as bcrypt from 'bcrypt';
 import { Entity, Column, BeforeInsert } from 'typeorm';
 import { BaseEntity } from '../main/BaseEntitiy';
 
+// example of an entity you may want to start with
+// TODO add class-validators (decorators) + hook in proper TypeORM error reporting
+// with ApolloError types
+
 export enum USER_STATUS_MAP {
   ACTIVE = 'USER_ACTIVE',
   BANNED = 'USER_BANNED',
-  CLEANED = 'USER_CLEANED', // cleaned for GDPR "forgotten"
-  IN_REVIEW = 'USER_UNDER_REVIEW'
+  CLEANED = 'USER_CLEANED' // cleaned for GDPR "forgotten"
 }
 
 export enum USER_PERMISSION_MAP {

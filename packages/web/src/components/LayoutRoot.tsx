@@ -1,5 +1,7 @@
 import * as React from 'react'
+import { ApolloProvider } from 'react-apollo'
 import styled from 'react-emotion'
+import APIClient from '../data/sources/APIClient'
 
 const StyledLayoutRoot = styled.div`
   display: flex;
@@ -12,7 +14,9 @@ interface LayoutRootProps {
 }
 
 const LayoutRoot: React.SFC<LayoutRootProps> = ({ children, className }) => (
-  <StyledLayoutRoot className={className}>{children}</StyledLayoutRoot>
+  <ApolloProvider client={APIClient}>
+    <StyledLayoutRoot className={className}>{children}</StyledLayoutRoot>
+  </ApolloProvider>
 )
 
 export default LayoutRoot

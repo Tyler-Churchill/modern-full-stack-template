@@ -9,5 +9,6 @@
       "npmClientArgs": ["--no-package-lock"]
     }
   },
+  "npmClient": "yarn",
   "version": "independent"
 }

@@ -1,6 +1,6 @@
 import { gql } from 'apollo-server-express';
 import { IResolvers } from 'graphql-tools';
-import { USER_PERMISSION_MAP } from '../../../../entities/src/entity/User';
+import { USER_PERMISSION_MAP } from '../../../../common/src/entity/User';
 
 const perms = USER_PERMISSION_MAP;
 
